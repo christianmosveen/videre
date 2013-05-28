@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPS</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            if (navigator.geolocation)
+                navigator.geolocation.getCurrentPosition(function(pos) {$("#coords").html(pos.coords.latitude + " " + pos.coords.longitude)});
+        });
+    </script>
+</head>
+<body>
+    GPS Coordinates: <span id="coords"></span>
+</body>
+</html>
